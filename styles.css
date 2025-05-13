@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Center all content inside a neat card box */
+.main-box {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Box wrapper */
+.box {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+/* Header of each box */
+.header-box {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: lightgrey;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-box:hover {
+  background-color: lightslategray;
+  color: white;
+}
+
+/* Hidden content by default */
+.content-box {
+  display: none;
+  padding: 20px;
+}
+
+/* Show content when active */
+.box.active .content-box {
+  display: block;
+}
+
+/* Label and dropdown styling */
+.option {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+
+/* Optional arrow (if using) */
+.arrow {
+  font-size: 18px;
+}
+
+/* Responsive fix */
+@media (max-width: 600px) {
+  .header-box h2 {
+    font-size: 16px;
+  }
+
+  select {
+    font-size: 14px;
+  }
+
+  .main-box {
+    padding: 20px 15px;
+  }
+}
