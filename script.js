@@ -1,12 +1,10 @@
-function toggleBox(element) {
-  const box = element.parentElement;
-  const allBoxes = document.querySelectorAll('.box');
+function toggleBox(header) {
+  const box = header.parentElement;
+  const isActive = box.classList.contains('active');
 
-  allBoxes.forEach(b => {
-    if (b !== box) {
-      b.classList.remove('active');
-    }
-  });
+  document.querySelectorAll('.box').forEach(b => b.classList.remove('active'));
 
-  box.classList.toggle('active');
+  if (!isActive) {
+    box.classList.add('active');
+  }
 }
